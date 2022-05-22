@@ -1,0 +1,18 @@
+This open source software uses third-party libraries or other resources that
+may be distribuited under different licenses.
+
+Next, all the third-party licenses links are provided for information only.
+In the event that accidentally failed to list a required link, please bring
+it to me attention. Thank you!
+
+
+[*] .NET Runtime (by .NET Foundation and Contributors)
+    --------------------------------------------------
+      Licensed under the MIT License
+      https://github.com/dotnet/runtime/blob/main/LICENSE.TXT
+
+
+[*] .NET SDK (by .NET Foundation and Contributors)
+    ----------------------------------------------
+      Licensed under the MIT License
+      https://github.com/dotnet/sdk/blob/main/LICENSE.TXT

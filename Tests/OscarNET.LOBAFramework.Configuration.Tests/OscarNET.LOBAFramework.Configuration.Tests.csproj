@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <Configurations>Debug;Release</Configurations>
+    <DebugSymbols>true</DebugSymbols>
+    <Deterministic>false</Deterministic>
+    <DocumentationFile>bin\$(Configuration)\OscarNET.LOBAFramework.Configuration.Tests.xml</DocumentationFile>
+    <ErrorReport>none</ErrorReport>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>OscarNET.LOBAFramework.Configuration</RootNamespace>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>full</DebugType>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\Common\GlobalAssemblyInfo.cs" Link="Properties\GlobalAssemblyInfo.cs" />
+    <Compile Include="..\..\Common\GlobalAssemblyTestSuppressions.cs" Link="Properties\GlobalAssemblyTestSuppressions.cs" />
+    <Compile Include="..\..\Common\GlobalAssemblyVersionInfo.cs" Link="Properties\GlobalAssemblyVersionInfo.cs" />
+    <Compile Include="..\..\Common\OrganizationAssemblyInfo.cs" Link="Properties\OrganizationAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.msbuild" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="FluentAssertions" Version="6.6.0" />
+    <PackageReference Include="Microsoft.CodeCoverage" Version="17.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="ReportGenerator" Version="5.1.9" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="XunitXml.TestLogger" Version="3.0.70" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\OscarNET.LOBAFramework.Configuration\OscarNET.LOBAFramework.Configuration.csproj" />
+    <ProjectReference Include="..\..\Source\OscarNET.LOBAFramework.LanguageResources\OscarNET.LOBAFramework.LanguageResources.csproj" />
+    <ProjectReference Include="..\OscarNET.LOBAFramework.Testing\OscarNET.LOBAFramework.Testing.csproj" />
+  </ItemGroup>
+
+</Project>
